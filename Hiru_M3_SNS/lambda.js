@@ -8,10 +8,10 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('succuess getTopicAttributes',data);
+			console.log('succuess getTopicAttributes', data);
 		})
 		.catch(err => {
-			console.log('error getTopicAttributes',err);
+			console.log('error getTopicAttributes', err);
 		});
 
 	sns.subscribe({
@@ -20,22 +20,21 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('succuess subscribe',data);
+			console.log('succuess subscribe', data);
 		})
 		.catch(err => {
-			console.log('error subscribe',err);
+			console.log('error subscribe', err);
 		});
 
 
 	sns.unsubscribe({
-		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru',
 		SubscriptionArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru:7fca73d1-1aa3-4eed-b5c7-dc31ae15205e'
 	}).promise()
 		.then(data => {
-			console.log('succuess unsubscribe',data);
+			console.log('succuess unsubscribe', data);
 		})
 		.catch(err => {
-			console.log('succuess unsubscribe',err);
+			console.log('succuess unsubscribe', err);
 		});
 
 
