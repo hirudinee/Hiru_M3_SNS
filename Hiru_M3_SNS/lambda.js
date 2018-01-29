@@ -21,19 +21,19 @@ exports.handler = function (event, context, callback) {
 			},
 			'key002': {
 				DataType: 'Binary',
-				StringValue: '1'
-			},
+				StringValue: 'binary(1)'
+			}
 		},
 		MessageStructure: 'String',
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ',data)
+			console.log('success ', data)
 		})
 		.catch(err => {
-			console.log('err ',err)
+			console.log('err ', err)
 		});
 
-	
+
 	callback(null, 'Successfully executed');
 }
