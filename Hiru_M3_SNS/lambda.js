@@ -7,19 +7,19 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ', data);
+			console.log('success getTopicAttributes', data);
 		})
 		.catch(err => {
-			console.log('error ', err);
+			console.log('error getTopicAttributes ', err);
 		});
 	sns.listSubscriptionsByTopic({
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ', data);
+			console.log('success listSubscriptionsByTopic ', data);
 		})
 		.catch(err => {
-			console.log('success ', data);
+			console.log('success listSubscriptionsByTopic ', data);
 		});
 
 	sns.setTopicAttributes({
@@ -28,22 +28,22 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ', data);
+			console.log('success setTopicAttributes ', data);
 		})
 		.catch(err => {
-			console.log('success ', data);
+			console.log('success setTopicAttributes ', data);
 		});
 
 	sns.subscribe({
 		Protocol: 'email',
-		Endpoint: 'hirudinee@adroitlogic.com',
+		Endpoint: 'hirudineel@gmail.com',
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ', data);
+			console.log('success subscribe ', data);
 		})
 		.catch(err => {
-			console.log('success ', data);
+			console.log('success subscribe ', data);
 		});
 
 
