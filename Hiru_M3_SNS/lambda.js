@@ -18,10 +18,6 @@ exports.handler = function (event, context, callback) {
 			'key004': {
 				DataType: 'String.Array',
 				StringValue: '11'
-			},
-			'key002': {
-				DataType: 'Binary',
-				StringValue: '1'
 			}
 		},
 		MessageStructure: 'String',
