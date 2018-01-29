@@ -27,6 +27,15 @@ exports.handler = function (event, context, callback) {
 		});
 
 
+	sns.unsubscribe({
+		SubscriptionArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru:7fca73d1-1aa3-4eed-b5c7-dc31ae15205e'
+	}).promise()
+		.then(data => {
+			// your code goes here
+		})
+		.catch(err => {
+			// error handling goes here
+		});
 
 
 
