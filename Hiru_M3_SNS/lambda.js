@@ -7,11 +7,45 @@ exports.handler = function (event, context, callback) {
 		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
 	}).promise()
 		.then(data => {
-			console.log('success ',data);
+			console.log('success ', data);
 		})
 		.catch(err => {
-			console.log('error ',err);
+			console.log('error ', err);
 		});
+	sns.listSubscriptionsByTopic({
+		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
+	}).promise()
+		.then(data => {
+			console.log('success ', data);
+		})
+		.catch(err => {
+			console.log('success ', data);
+		});
+
+	sns.setTopicAttributes({
+		AttributeName: 'DisplayName',
+		AttributeValue: 'Changed by the lambda',
+		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
+	}).promise()
+		.then(data => {
+			console.log('success ', data);
+		})
+		.catch(err => {
+			console.log('success ', data);
+		});
+
+	sns.subscribe({
+		Protocol: 'email',
+		Endpoint: 'hirudinee@adroitlogic.com',
+		TopicArn: 'arn:aws:sns:us-east-1:480964559519:new_resource_hiru'
+	}).promise()
+		.then(data => {
+			console.log('success ', data);
+		})
+		.catch(err => {
+			console.log('success ', data);
+		});
+
 
 
 
