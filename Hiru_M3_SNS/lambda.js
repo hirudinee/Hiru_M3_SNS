@@ -34,7 +34,7 @@ exports.handler = function (event, context, callback) {
 			console.log('succuess unsubscribe',data);
 		})
 		.catch(err => {
-			console.log('succuess unsubscribe',data);
+			console.log('succuess unsubscribe',err);
 		});
 
 
